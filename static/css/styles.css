@@ -1,0 +1,17 @@
+h1 {
+    font-size: 50pt;
+}
+
+.inp {
+    font-weight: 700;
+    font-size: 20pt;
+}
+
+.btn {
+    font-size: 25pt;
+    margin-top: 13pt;
+}
+
+#result {
+    font-size: 50pt;
+}
