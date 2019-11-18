@@ -1,6 +1,9 @@
 import os
 import cv2
 
+import random
+import pickle
+
 
 DATADIR = 'raw_data/pet_imgs'
 CATEGORIES = ['dog', 'cat']
@@ -25,9 +28,27 @@ def create_training_data():
     return training_data
 
 
+def save_training_set(training_data):
+    X = []
+    y = []
+
+    for features, label in training_data:
+        X.append(features)
+        y.append(label)
+
+    pickle_out = open('training_set/X.pickle', 'wb')
+    pickle.dump(X, pickle_out)
+    pickle_out.close()
+
+    pickle_out = open('training_set/y.pickle', 'wb')
+    pickle.dump(y, pickle_out)
+    pickle_out.close()
+
+
 def main():
     training_data = create_training_data()
-    print(len(training_data))
+    random.shuffle(training_data)
+    save_training_set(training_data)
 
 
 if __name__ == "__main__":
