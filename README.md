@@ -5,7 +5,7 @@
 - Python 3.6.8
 
 **How to install:**
-- python3 -m venv env
+- python3 -m venv venv
 - . venv/bin/activate
 - pip install -r requirements.txt
 
