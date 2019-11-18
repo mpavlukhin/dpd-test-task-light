@@ -7,7 +7,7 @@
 **How to install:**
 - python3 -m venv venv
 - . venv/bin/activate
-- pip install -r requirements.txt
+- pip install -r requirements.txt --no-cache-dir
 
 **How to just run web app:**
 - python app.py
