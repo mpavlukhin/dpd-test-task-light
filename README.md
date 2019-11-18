@@ -16,3 +16,8 @@
 **How to train CNN:**
 - cd cnn
 - python train.py
+
+**You need to put imageset to
+'cnn/raw_data/pet_imgs/cat/' and 'cnn/raw_data/pet_imgs/dog/' to train it**
+
+**Version with imageset:** https://github.com/mpavlukhin/dpd-test-task
