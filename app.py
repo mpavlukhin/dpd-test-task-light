@@ -4,6 +4,8 @@ import os
 
 import cnn.predict as cnn
 
+from werkzeug.contrib.fixers import ProxyFix
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
@@ -67,5 +69,6 @@ def upload():
             return jsonify(result=result)
 
 
+app.wsgi_app = ProxyFix(app.wsgi_app)
 if __name__ == '__main__':
     app.run(debug=True)
